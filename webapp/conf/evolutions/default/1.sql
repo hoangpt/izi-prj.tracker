@@ -29,6 +29,17 @@ create table project (
   constraint pk_project primary key (id))
 ;
 
+create table task (
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
+  is_done                   tinyint(1) default 0,
+  due_date                  datetime,
+  assign_to_email           varchar(255),
+  project_id                bigint,
+  folder                    varchar(255),
+  constraint pk_task primary key (id))
+;
+
 create table account (
   email                     varchar(255) not null,
   name                      varchar(255),
@@ -38,6 +49,10 @@ create table account (
 
 alter table project add constraint fk_project_client_1 foreign key (client_id) references client (id) on delete restrict on update restrict;
 create index ix_project_client_1 on project (client_id);
+alter table task add constraint fk_task_assignTo_2 foreign key (assign_to_email) references account (email) on delete restrict on update restrict;
+create index ix_task_assignTo_2 on task (assign_to_email);
+alter table task add constraint fk_task_project_3 foreign key (project_id) references project (id) on delete restrict on update restrict;
+create index ix_task_project_3 on task (project_id);
 
 
 
@@ -48,6 +63,8 @@ SET FOREIGN_KEY_CHECKS=0;
 drop table client;
 
 drop table project;
+
+drop table task;
 
 drop table account;
 
