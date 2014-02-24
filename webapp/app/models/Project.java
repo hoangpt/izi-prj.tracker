@@ -26,4 +26,8 @@ public class Project extends Model {
 
     Boolean isActive;
     Boolean isDeleted;
+
+  public static boolean isMember(Long projectId, String username) {
+    return true;
+  }
 }

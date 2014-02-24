@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" href="style_invoices.css" rel="stylesheet">
+<style> 
+body {
+    background-image:url('images/winter_christmas_1366x768_45869.jpg');            
+    color:white;
+    margin: auto;
+    font-size: 12px;
+    font-family: tahoma ;
+    filter:Alpha(opacity=50); /* IE8 and earlier */
+} 
+#h1 {    
+    width: 200%;    
+    opacity: 1;
+    background-color:rgba(0,0,0,0.6);
+    border-radius: 5px;
+    margin: 2px 2px 2px 2px ;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 1px #000;
+}
+#h2{
+    width: 9%;
+    height: 700px;
+    background-color:rgba(0,0,0,0.6);
+    border-radius: 5px;
+    opacity: 1;
+    margin: 2px 2px 2px 2px;
+    padding: 5px 5px 5px 5px;
+    float: left;
+    text-align: center;
+       box-shadow: 2px 2px 1px #000;
+}
+#h3{
+    width: 13%;
+    height: 700px;
+    background-color:rgba(0,0,0,0.6);
+    border-radius: 5px;    
+     margin: 2px 2px 2px 2px;
+    float: left;
+    font-size: 10px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    box-shadow: 2px 2px 1px #000;
+}
+#h4{
+    width: 70%;
+    height: 710px;
+    background-color:rgba(0,0,0,0.6);
+    border-radius: 5px;
+    margin: 2px 2px 2px 2px;
+    padding: 15px 15px 15px 15px;
+      float: left;
+         box-shadow: 2px 2px 1px #000;
+}
+#h2 a:hover{      
+    -webkit-transition: all 200ms linear;
+    -webkit-transition-duration: 0.2s,0.2s;
+    -webkit-transition-property: color, background-color;
+    color: black;
+    background-color: blue;
+    padding: 15px 20px 15px 20px;  
+    margin: 10px 10px 10px 10px;
+}
+#h3 a:hover{
+    -webkit-transition-duration: 0.2s,0.2s;
+    -webkit-transition-property: font-size, color;
+    font-size: 16px;
+    color: black;    
+}
+#h1 a:hover{
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-property: background-color;    
+     background-color: blue;
+     padding: 10px 10px 10px 10px;  
+    margin: 10px 10px 10px 10px;   
+    overflow: hidden;
+}
+#h4 a:hover{      
+    -webkit-transition: all 200ms linear;
+    -webkit-transition-duration: 0.5s,0.5s,0.5s;
+    -webkit-transition-property: color, background-color,margin;
+    color: white;
+    background-color: white;
+    padding-left: 15px;  
+    margin: 0px 10px 0px 10px;
+    
+}
+
+#h2:hover{
+    -webkit-animation-name: h2;    
+    width: 11%;    
+}     
+#h3:hover{
+    -webkit-animation-name: h3;    
+    width: 15%;
+}    
+#h5{
+    height: 500px;
+    width: 300px;
+    background: rgba(0,0,0,0.5);
+    float: left;
+    margin: 20px 5px 20px 5px ;
+     padding: 20px 20px 20px 20px;
+    
+}
+#h6{
+    height: 500px;
+    width: 220px;
+    background: rgba(0,0,0,0.5);
+    float: left;
+    margin: 20px 5px 20px 5px ;
+    padding: 20px 20px 20px 20px;
+    line-height: 20px;
+}
+#h7{
+    height: 500px;
+    width: 250px;
+    background: rgba(0,0,0,0.5);
+    float: left;
+    margin: 20px 5px 20px 5px ;
+    padding: 20px 20px 20px 20px;
+}
+#h8{
+    height: 150px;
+    width: 200px;
+    background: rgba(0,0,0,0.8);    
+    margin: auto;    
+}
+#h88{
+    height: 150px;
+    width: 200px;
+    background: rgba(10,10,10,0.3);    
+    margin: auto; 
+    border-style: solid;
+    border-color: black;   
+}
+#h9{
+    height: 60px;
+    width: 150px;
+    background: rgba(10,10,10,0.3);        
+    margin: auto; 
+    margin-top: 20px;   
+}
+#h10{
+    height: 50px;
+    width: 50px;
+    background: rgba(10,10,10,0.3);    
+    margin: auto;    
+}
+
+</style>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+    snowStorm.snowColor = rgba(0,0,0,255);
+</script>
+</head>
+<body>
+    <div id="h1">
+        <b style="padding-right:100px;"> This element's opacity is 0.5! </b>
+        <input type="text" value="Search" style="border-radius: 10px ;"/>
+        <b style="padding-left:50px;"><img src="images/avatar.jpg" width="25px" height="25px" /></b>
+        <a href="# "style="padding:0px 50px 10px 0px;text-decoration: none;color: white;">          
+            Hi , Tuan Nghia Admin
+         </a> 
+        <a href="#" style="text-decoration: none;color: white;">
+            Logout
+        </a>
+    </div>
+    <div id="h2">              
+        <a href="#" id="Dashboard" style="text-decoration: none;color: white;line-height:50px;" >Dashboard</a><br/>
+        <a href="#" id="Projects" style="text-decoration: none;color: white;line-height:50px;" >Projects</a><br/>
+        <a href="#" id="Invoices" style="text-decoration: none;color: white;line-height:50px;" >Invoices</a><br/>
+        <a href="#" id="Reporting" style="text-decoration: none;color: white;line-height:50px;" >Reporting</a><br/>
+        <a href="#" id="Clients" style="text-decoration: none;color: white;line-height:50px;" >Clients</a><br/>
+        <a href="#" id="Files" style="text-decoration: none;color: white;line-height:50px;" >Files</a><br/>
+        <a href="#" id="Tasks" style="text-decoration: none;color: white;line-height:50px;" >Tasks</a><br/>
+        <a href="#" id="Users" style="text-decoration: none;color: white;line-height:50px;" >Users</a><br/>
+        <a href="#" id="Templates" style="text-decoration: none;color: white;line-height:50px;" >Project Templates</a><br/>
+        <a href="#" id="Admin" style="text-decoration: none;color: white;line-height:50px;" >Admin</a><br/>
+        
+    </div>
+    <div style="float: right;">    
+</div>
+    <div id="h3" >
+        
+    
+        <div id="Projects_div" style="display: none;" class="tab">
+            <b style="font-size: 16px;">Projects
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>           
+            <a style="line-height:30px;"> &nbsp;</a>
+            <div style="overflow-y: a auto; line-height: 30px;height: 700px;">
+                <a href="#" id="sample" style="text-decoration: none;color:white">
+                    <b>Sample Project</b></br>
+                       SAMPLE CLIENT</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="new" style="text-decoration: none;color:white">
+                    <b>New Website</b></br>
+                       NELSON TIRES</br>                      
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="logbook" style="text-decoration: none;color:white">
+                    <b>Logbook</b></br>
+                       WIDGET CORP</br>             
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="vertigo" style="text-decoration: none;color:white">
+                    <b>Vertigo</b></br>
+                       SMITH AND CO.</br>                  
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="event" style="text-decoration: none;color:white">
+                    <b>Event System</b></br>
+                       TESSIER-ASHPOO</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="support" style="text-decoration: none;color:white">
+                    <b>Support Center</b></br>
+                       WESTERN GAS AND ELECTRIC </br>                   
+                </a>                
+                <b style="opacity:0.5;">__________</b></br>
+            </div>
+        </div>
+    
+         <div id="Invoices_div" style="display: none;" class="tab">
+           <b style="font-size: 16px;">Invoices
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+            <a style="line-height:30px;"> &nbsp;</a>
+            <div style="overflow-y: auto; line-height: 30px;height: 600px;">
+                <a href="#" id="525200" style="text-decoration: none;color:white">
+                    <b>Sample Client</b></br>
+                       $5,252.00 PAID</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="121200" style="text-decoration: none;color:white">
+                    <b>Nelson Tires</b></br>
+                       $1,212.00 PAID</br>                  
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="252500" style="text-decoration: none;color:white">
+                    <b>Widget Corp</b></br>
+                       $2,525.00 PAID</br>                      
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="40400" style="text-decoration: none;color:white">
+                    <b>Smith and CO.</b></br>
+                       $404.00 PAID</br>                  
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="284315" style="text-decoration: none;color:white">
+                    <b>Tessier-ASHPOO</b></br>
+                       2,843.15</br>                    
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="656500" style="text-decoration: none;color:white">
+                    <b>Smith and CO.</b></br>
+                       $6,565.00 </br>                      
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="50500" style="text-decoration: none;color:white">
+                    <b>Sample Client</b></br>
+                       $505.00 </br>                    
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="131300" style="text-decoration: none;color:white">
+                    <b>Widget Corp</b></br>
+                       $1,313.00 </br>                  
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="80800" style="text-decoration: none;color:white">
+                    <b>Smith and CO.</b></br>
+                       $808.00 </br>                 
+                </a>                
+                <b style="opacity:0.5;">__________</b></br>            
+            </div>
+        </div>
+    
+        
+        
+        <div id="Clients_div" style="display: none;font-size: 12px; overflow-y: scroll;height: 700px;" class="tab">
+            <b style="font-size: 16px;">Clients
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+            <a style="line-height:30px;"> &nbsp;</a>
+            <div style="overflow-y: none; line-height: 30px;height: 600px;">
+                <a href="#" id="clientcom" style="text-decoration: none;color:white">
+                    <b>Sample Client</b></br>
+                       CLIENT@EXAMPLE.COM</br>                      
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="larrycom" style="text-decoration: none;color:white">
+                    <b>Bluth Company</b></br>
+                       LARRY.BLUTH@BLUTHCO.COM</br>                     
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="jennifercom" style="text-decoration: none;color:white">
+                    <b>Incom Corporation</b></br>
+                       JENNIFER.FIELD@INCOM.COM</br>                 
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="milfordcom" style="text-decoration: none;color:white">
+                    <b>Atlantic Northern</b></br>
+                       MILFORD.ROXXON@ATLANTICNORTHERN.COM</br>       
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="timduffcom" style="text-decoration: none;color:white">
+                    <b>Charles Townsend Agency</b></br>
+                       TIMDUFF@CHARLESTTOWNSEND.COM</br>                    
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="spingercom" style="text-decoration: none;color:white">
+                    <b>Axis Chemical Co.</b></br>
+                       SPINGER.IAN@AXISCHEMICAL.COM </br>                   >
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="davidcom" style="text-decoration: none;color:white">
+                    <b>Virtucon</b></br>
+                       DAVID.BROOK@VIRTUCON.COM </br>                 
+                </a>            
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="michealcom" style="text-decoration: none;color:white">
+                    <b>Western Gas @ Electric</b></br>
+                       MICHEAL.CAMPBELL@WGEX.COM </br>        
+                </a>            
+                
+                <a href="#" id="axexcom" style="text-decoration: none;color:white">
+                    <b>Tessier-Ashpool</b></br>
+                       AXEX@TESSIERASHPOOL.COM </br>             
+                </a>                                
+                 <b style="opacity:0.5;">__________</b></br>  
+                <a href="#" id="johnreslercom" style="text-decoration: none;color:white">
+                    <b>Smith anh Co.</b></br>
+                       JOHNRESLER@SMITHCO.COM </br>                      
+                </a>            
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="susancom" style="text-decoration: none;color:white">
+                    <b>Widget Corp</b></br>
+                       SUSAN@WIDGET.NET </br>         
+                </a>            
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="jimcom" style="text-decoration: none;color:white">
+                    <b>Nelson Tires</b></br>
+                       JIM@NELSONTIRES.COM </br>                 
+                </a>                           
+                 <b style="opacity:0.5;">__________</b></br>
+            </div>
+        </div>
+    
+        <div id="Files_div" style="display: none;" class="tab">
+            <b style="font-size: 16px;">Files
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+            <a style="line-height:30px;"> &nbsp;</a>
+            <div style="overflow-y: auto; line-height: 30px;height: 600px;">
+                <a href="#" id="generic" style="text-decoration: none;color:white">
+                    <b>Generic_shortform_NDA.pdf</b></br>                                           
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="finding" style="text-decoration: none;color:white">
+                    <b>Finding_the_Balace.mp3</b></br>                               
+                </a>
+                               <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="preview" style="text-decoration: none;color:white">
+                    <b>preview.jpg</b></br>                                  
+                </a>                 
+                               <b style="opacity:0.5;">__________</b></br>
+            </div>
+        </div>
+    
+        <div id="Tasks_div" style="display: none;overflow-y: scroll;height: 700px;" class="tab">
+            <b style="font-size: 16px;">Tasks
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+            <a style="line-height:30px;"> &nbsp;</a>
+            <div style="overflow-y: a auto; line-height: 30px;height: 600px;">
+                <a href="#" id="requi" style="text-decoration: none;color:white">
+                    <b>Requirement</b></br>                                                                
+                </a>
+                <b style="opacity:0.5;">__________</b></br> 
+                <a href="#" id="call" style="text-decoration: none;color:white">
+                    <b>Call Joan to disc...</b></br>                                           
+                </a>
+                   <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="sched" style="text-decoration: none;color:white">
+                    <b>Schedule meeting...</b></br>                                              
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="write" style="text-decoration: none;color:white">
+                    <b>Write new requirement</b></br>                                             
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="crea1" style="text-decoration: none;color:white">
+                    <b>Create process float...</b></br>                                             
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="devel" style="text-decoration: none;color:white">
+                    <b>Development:</b></br>                                              
+                </a>
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="enabl" style="text-decoration: none;color:white">
+                    <b>Enable password...</b></br>                                            
+                </a>            
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="crea2" style="text-decoration: none;color:white">
+                    <b>Create a build sc...</b></br>                                           
+                </a>           
+               <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="add" style="text-decoration: none;color:white">
+                    <b>Add feature X to...</b></br>                                             
+                </a>                                  
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="desig" style="text-decoration: none;color:white">
+                    <b>Design:</b></br>                                              
+                </a>            
+                 <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="get" style="text-decoration: none;color:white">
+                    <b>Get the new desi...</b></br>                                              
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="talk" style="text-decoration: none;color:white">
+                    <b>Talk to client ab...</b></br>                                             
+                </a>                                                       
+                <b style="opacity:0.5;">__________</b></br>                                                       
+                <a href="#" id="sect1" style="text-decoration: none;color:white">
+                    <b>Section 1:</b></br>                                              
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="this" style="text-decoration: none;color:white">
+                    <b>This is a task</b></br>                                             
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="they" style="text-decoration: none;color:white">
+                    <b>They are super e...</b></br>                                             
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="just" style="text-decoration: none;color:white">
+                    <b>Just start typing...</b></br>                                             
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="chang" style="text-decoration: none;color:white">
+                    <b>Changes are aut...</b></br>                                             
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="crea3" style="text-decoration: none;color:white">
+                    <b>Create a section</b></br>                                              
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="doubl" style="text-decoration: none;color:white">
+                    <b>Double click on...</b></br>                                             
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="sect2" style="text-decoration: none;color:white">
+                    <b>Section 2:</b></br>                                             
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="anoth" style="text-decoration: none;color:white">
+                    <b>Another task</b></br>                                             
+                </a>                                               
+                <b style="opacity:0.5;">__________</b></br>                                                 
+            </div>
+        </div>
+    
+        <div id="Users_div" style="display: none;" class="tab">
+            <b style="font-size: 16px;">Users
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+            <a style="line-height:30px;"> &nbsp;</a>
+            <div style="overflow:auto; line-height: 30px;height: 600px;">
+                <a href="#" id="uadmin" style="text-decoration: none;color:white">                    
+                       ADMIN</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="uclient" style="text-decoration: none;color:white">                    
+                        CLIENT</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="ularry" style="text-decoration: none;color:white">                    
+                       LARRY.BLUTH@BLUTHCO.COM</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="ujennifer" style="text-decoration: none;color:white">                    
+                       JENNIFER.FIELD@INCOM.COM</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="umilford" style="text-decoration: none;color:white">                    
+                       MILFORD.ROXXON@ATLANTICNORTHERN.COM</br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="utimduff" style="text-decoration: none;color:white">                    
+                       TIMDUFF@CHARLESTTOWNSEND.COM</br>                                              
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="uspinger" style="text-decoration: none;color:white">                    
+                       SPINGER.IAN@AXISCHEMICAL.COM </br>                       
+                </a>
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="udavid" style="text-decoration: none;color:white">                    
+                       DAVID.BROOK@VIRTUCON.COM </br>                       
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="umicheal" style="text-decoration: none;color:white">                    
+                       MICHEAL.CAMPBELL@WGEX.COM </br>                       
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="uaxex" style="text-decoration: none;color:white">                    
+                       AXEX@TESSIERASHPOOL.COM </br>                       
+                </a>                                
+                <b style="opacity:0.5;">__________</b></br>  
+                <a href="#" id="ujohnresler" style="text-decoration: none;color:white">                
+                       JOHNRESLER@SMITHCO.COM </br>                      
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="ususan" style="text-decoration: none;color:white">                    
+                       SUSAN@WIDGET.NET </br>                       
+                </a>            
+                <b style="opacity:0.5;">__________</b></br>
+                <a href="#" id="ujim" style="text-decoration: none;color:white">                    
+                       JIM@NELSONTIRES.COM </br>                       
+                </a>                           
+                <b style="opacity:0.5;">__________</b></br>
+            </div>
+        </div>
+        
+                
+        
+         <div id="Templates_div" style="display: none;" class="tab">
+            <b style="font-size: 16px;">Templates
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+        </div>
+    
+        
+        
+    </div>
+    
+    
+    
+    <div id="h4">
+        
+        <div id="Dashboard_div" class="tab">
+            <b style="font-size: 16px;">Dashboard</b>
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>            
+        </div>
+        <div id="Reporting_div" style="display: none;" class="tab">
+            <b style="font-size: 16px;">Reporting
+            <select name="sort" style="font-size: 8px;margin: 5px 5px 5px 5px;">
+                <option value="All">All</option>
+                <option value="Free">Free</option>
+                <option value="Paid">Paid</option>
+            </select>            
+            </b>   <br />         
+            ____________</br>
+        </div>        
+        <div id="sample_div" style="display: none;" class="tab">
+            <b style="font-size: 24px;">Sample project</b>
+            <b style="font-size: 18px;color: CCC;">(25%)</b> <br /><br />
+            <table style="border:aqua;">
+                <a href="#" style="background-color:rgba(0,0,0,0.2);border-radius: 2px;border-style: solid;padding: 5px 15px 5px 15px;">Details</a>
+                <a href="#" style="background-color:rgba(0,0,0,0.2);border-radius: 2px;border-style: solid;padding: 5px 15px 5px 15px;">Calander</a>
+                <a href="#" style="background-color:rgba(0,0,0,0.2);border-radius: 2px;border-style: solid;padding: 5px 15px 5px 15px;">Tasks</a>
+                <a href="#" style="background-color:rgba(0,0,0,0.2);border-radius: 2px;border-style: solid;padding: 5px 15px 5px 15px;">Files</a>
+                <a href="#" style="background-color:rgba(0,0,0,0.2);border-radius: 2px;border-style: solid;padding: 5px 15px 5px 15px;">Invoices</a>
+                <a href="#" style="background-color:rgba(0,0,0,0.2);border-radius: 2px;border-style: solid;padding: 5px 15px 5px 15px;">Notes</a>
+            </table>  
+            <div id="h5"> 
+                Sample Admin completed a task 9 months ago
+                <a>#201008</a>
+            </div>
+            <div id="h6"> 
+                CLIENT : <br />
+                <a>SAMPLE CLIENT</a>
+                <div id="h8">
+                <h1>ON SCHEDULE </h1>
+                <b style="font-size: 24px;">25%</b>
+                <h3>Expected progress: 0%</h3>
+                </div>
+                <div id="h88">
+                    Due Date <br/>
+                    <b style="font-size: 18px;">May 27</b>
+                    <br />
+                    <div id="h9">
+                        
+                            <b style="border-style:solid;background-color: black;line-height:60px;padding:20px 20px 20px 20px;margin:auto;">adsf</b>
+                            <b style="border-style:solid;background-color: black;padding:20px 20px 20px 20px;margin:auto;">wer</b>
+                        
+                    </div>                                     
+                </div>
+            </div>
+            <div id="h7">                 
+            </div>          
+        </div>
+        
+        
+        <div id="logbook_div" style="display: none;" class="tab">
+            <h1>Logbook</h1>
+        </div>
+    
+        <div id="vertigo_div" style="display: none;" class="tab">
+            <h1>Vertigo</h1>
+        </div>
+    
+        <div id="event_div" style="display: none;" class="tab">
+            <h1>Event</h1>
+        </div>
+    
+        <div id="support_div" style="display: none;" class="tab">
+            <h1>Support</h1>
+        </div>                                        
+        
+        
+        
+        <div id="525200_div" style="display: none;" class="tab">
+            <div id="h5">
+                <b>Your</b> <br />
+                <b>Company logo</b> <br />
+                <b style="line-height: 100px;">&nbsp;</b> <br/>
+                <b>To: </b><br />
+                <b>Sample Client <br />
+                <b>123 Fern St </b><br />
+                <b>Atlanta GA </b><br />
+                <b style="line-height: 100px;">&nbsp;</b> <br/>
+                <table>
+                    <tr>
+                        <td>Item</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td>Website Design</td>
+                        <td>40</td>
+                        <td>80.00</td>
+                        <td>$3,200.000</td>
+                    </tr>
+                    <tr>
+                        <td>Slicing PSD, &and Coding HTML</td>
+                        <td>25</td>
+                        <td>80.00</td>
+                        <td>$2,000.00</td>
+                    </tr>
+                </table> <br />
+                <table style="padding-left: 150px;">
+                    <tr>
+                        <td>Invoice</td>
+                        <td>Summary</td>                        
+                    </tr>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$5,200.00</td>                        
+                    </tr>
+                    <tr>
+                        <td>Tax(1%)</td>
+                        <td>$52.00</td>                        
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$5,252.00</td>                        
+                    </tr>
+                </table>
+            </div>
+            <div id="h6">
+                <h3>Sample Client</h3><br />
+                <b>Invoice #: 201000</b><br />
+                <b>Due Date: Apr 29th</b><br />
+                <b>Status: </b><b style="border-style: ridge;"> Paid</b><br />
+                <b>Date Sent: Not yet sent</b><br />
+                <b>Balance:$0.00</b><br />
+                <hr /> <br />
+                <a style="border-style: groove;background-color: rgba(0,0,0,0.3);padding: 5px 5px 5px 5px;">Preview</a>
+                <a style="border-style: groove;background-color: rgba(0,0,0,0.3);padding: 5px 5px 5px 5px;">Download</a>
+                
+                
+            </div>
+            <div id="h7"></div>
+        </div>
+    
+        <div id="121200_div" style="display: none;" class="tab">
+            <h1>121200</h1>
+        </div>
+        
+        <div id="252500_div" style="display: none;" class="tab">
+            <h1>252500</h1>
+        </div>
+    
+        <div id="40400_div" style="display: none;" class="tab">
+            <h1>40400</h1>
+        </div>
+    
+        <div id="284315_div" style="display: none;" class="tab">
+            <h1>284315</h1>
+        </div>
+    
+        <div id="656500_div" style="display: none;" class="tab">
+            <h1>656500</h1>
+        </div>
+        
+        <div id="50500_div" style="display: none;" class="tab">
+            <h1>50500</h1>
+        </div>
+    
+        <div id="131300_div" style="display: none;" class="tab">
+            <h1>131300</h1>
+        </div>
+        
+        <div id="80800_div" style="display: none;" class="tab">
+            <h1>80800</h1>
+        </div>
+  
+       
+       
+       
+       
+       
+       <div id="clientcom_div" style="display: none;" class="tab">
+            <table style="line-height: 30px;" >
+                <tr>
+                    <td>CLIENT DETAILS</td>
+                    <td>PRIMARY CONTACT</td>
+                </tr>
+                <tr>
+                    <td>123 Fren St</td>
+                    <td>Avatar</td>
+                </tr>
+                <tr>
+                    <td>111-111-1111</td>
+                    <td><a href="#" style="border-style: solid;padding: 2px 2px 2px 2px;background-color: rgba(0,0,0,0.3);">Change primary contact</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" style="background-color: rgba(0,0,0,0.3);">www.google.com</a></td>
+                    <td><a href="# "style="border-style: solid;padding: 2px 2px 2px 2px;background-color: rgba(0,0,0,0.3);">Add new user</a></td>
+                </tr>
+            </table>
+        </div>
+    
+        <div id="larrycom_div" style="display: none;" class="tab">
+            <h1>larry</h1>
+        </div>
+        
+        <div id="jennifercom_div" style="display: none;" class="tab">
+            <h1>jennifer</h1>
+        </div>
+    
+        <div id="milfordcom_div" style="display: none;" class="tab">
+            <h1>milfordcom</h1>
+        </div>
+    
+        <div id="timduffcom_div" style="display: none;" class="tab">
+            <h1>timduffcom</h1>
+        </div>
+    
+        <div id="spingercom_div" style="display: none;" class="tab">
+            <h1>spingercom</h1>
+        </div>
+        
+        <div id="davidcom_div" style="display: none;" class="tab">
+            <h1>davidcom</h1>
+        </div>
+    
+        <div id="michealcom_div" style="display: none;" class="tab">
+            <h1>michealcom</h1>
+        </div>
+        
+        <div id="axexcom_div" style="display: none;" class="tab">
+            <h1>axexcom</h1>
+        </div>
+         <div id="johnreslercom_div" style="display: none;" class="tab">
+            <h1>johnreslercom</h1>
+        </div>
+    
+        <div id="susancom_div" style="display: none;" class="tab">
+            <h1>susancom</h1>
+        </div>
+        
+        <div id="jimcom_div" style="display: none;" class="tab">
+            <h1>jimcom</h1>
+        </div>
+       
+       
+        <div id="generic_div" style="display: none;" class="tab">
+           <div id="h5"></div>
+           <div id="h6">
+            <h4>Generic_shortform_NDA.pdf</h4>
+            <a style="border-style: groove;background-color: rgba(0,0,0,0.3);padding: 2px 2px 2px 2px;">Download</a> <br /> <br />
+            <a style="border-style: groove;background-color: rgba(0,0,0,0.3);padding: 2px 2px 2px 2px;">Edit Notes</a>
+            <a style="border-style: groove;background-color: rgba(0,0,0,0.3);padding: 2px 2px 2px 2px;">Delete</a>
+            <hr />
+            <b>NOTES</b> <br />
+            <b>Upload Date: Apr 29, 2013</b> <br />
+            <b>Uploaded By: Sample Admin</b> <br />
+            <b>Size: 32kb</b>                       <br />                         
+           </div>
+           <div id="h7"></div>
+        </div>
+    
+        <div id="finding_div" style="display: none;" class="tab">
+            <h1>susancom</h1>
+        </div>
+        
+        <div id="preview_div" style="display: none;" class="tab">
+            <h1>jimcom</h1>
+        </div>
+       
+       
+       
+       
+       <div id="Admin_div" style="display: none;" class="tab">
+            <h1>Admin Settings </h1>
+            <hr/>
+            <h3>Software Version: 1.2.2</h3>
+            <h2>Admins</h2>
+            <a style="border-style: double;background-color:rgba(0,0,0,0.3);margin: 10px 10px 10px 10px;">Create New Admin</a>
+            <hr />
+            <h2>Templates</h2>
+            <h4>Rebuild the template files. Useful when you have changed the language files or the contents of the all-templates.mustache. 
+            You should read the Templates and Language Files sections in the documentation before using this functionality.</h4>
+            <a style="border-style: double;background-color:rgba(0,0,0,0.3);margin: 10px 10px 10px 10px;">Build Template File</a>
+            <hr />
+            <h2>Delete Invoice</h2>
+            <h4>Allows you to delete an invoice that has already been paid</h4>
+            <a style="border-style: double;background-color:rgba(0,0,0,0.3);margin: 10px 10px 10px 10px;">Delete File</a>
+        </div>
+       
+       
+       
+       
+       
+       
+    </div>
+    
+    
+    
+    
+    
+    
+   
+    <script>
+    $(document).ready(function(){
+        $('#h3').hide();
+        $('#h4').width("84.1%");
+       $('a').click(function(){
+        var id = $(this).attr("id");
+        $('.tab').hide(1000);
+        $("#"+id+"_div").show(1000);
+		$("#h3").show()
+        $('#h4').width("70%"); 
+        $('#h4').show(); 
+       });
+    $("#Dashboard").click(function(){
+		$("#h3").hide(1000); 
+        $('#h4').width("84.1%");
+        $('#h4').show(1000);      
+	});    
+	$("#Reporting").click(function(){
+		$("#h3").hide(1000); 
+        $('#h4').width("84.1%"); 
+        $('#h4').show(1000);     
+	});  
+    $("#Admin").click(function(){
+		$("#h3").hide(1000); 
+        $('#h4').width("84.1%"); 
+        $('#h4').show(1000);     
+	});            
+    });
+
+    </script>
+</body>
+</html>
+
+
+

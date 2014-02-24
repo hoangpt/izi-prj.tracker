@@ -1,0 +1,402 @@
+.panel-two{
+width: 985px;
+height: 710px;
+border: darkgrey solid 1px;
+margin: 0px;
+}
+a .preview:hover{
+    text-decoration: none;
+    -webkit-transition-duration: 100ms,100ms;
+    -webkit-transition-property: color, background-color;
+}
+a .download:hover{
+    text-decoration: none;
+}
+.panel-info{
+    height: 60px;
+    width: 100%;
+    border-bottom: darkgrey solid 1px;
+}
+.panel-info.panel-title{
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    float: left;
+}
+.panel-info h3{
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: normal;
+    display: inline-block;
+}
+h3{
+    font-size: 18px;
+    line-height: 27px;
+}
+.panel-info .panel-title-widget {
+display: inline-block;
+margin-left: 10px;
+}
+.panel-info .panel-actions-wrapper{
+    display: block;
+    width: 40px;
+    height: 25px;
+    border: #DDD solid 1px;
+    background-image: url(show-message-panel.png);
+    background-position: center;
+    float: right;
+    margin: 15px 20px 10px 10px;
+    background-color: #aaaaaa;
+    
+}
+#show-messages-panel {
+height: 29px;
+margin: 8px 20px 4px 4px;
+width: 20px;
+position: relative;
+float: right;
+}
+.inner{
+display: block;
+/*border: blue solid 1px;*/
+margin: 15px 15px 15px 15px;
+width: 955px;
+height: 615px;
+}
+.inner-left{
+display: block;
+/*border: red solid 1px;*/
+margin: 15px 20px 15px;
+width: 650px;
+height: 500px;
+float: left;
+}
+.inner-content{
+display: block;
+border: darkgrey solid 1px;
+width: 370px;
+height: 600px;
+float: left;
+}
+.invoice{
+    display: block;
+    margin: 30px 30px 30px;
+    width: 335px;
+    height: 560px;
+   /* border: red solid 1px;*/
+}
+.invoice-company-details{
+    font-size: 11px;
+   width: 100%;
+   height: 60px;
+   /*border: #777 solid 1px;*/
+    display: block;
+}
+.invoice-logo{
+    max-width: 40%;
+    height: 30px;
+    /*background-color: blue;*/
+    display: block;
+}
+.invoice-contact-info{
+    display: none;
+}
+.invoice-details{
+    width: 100%;
+    height: 109px;
+    display: block;
+}
+.invoice-client{
+    width: 100%;
+    height: 109px;
+    display: block;
+}
+.invoice-client-name{
+    width: 100%;
+    height: 18px;
+}
+.invoice-client-info{
+    width: 100%;
+    height: 18px;
+}
+.invoice .line-item{
+    display: table;
+    clear: both;
+    content: "";
+}
+.line-item{
+    width: 100%;
+}
+.invoice ul{
+    margin: 0;
+    list-style: none;
+  }
+ul{
+padding: 0;
+margin: 0 0 9px 25px;
+}
+.invoice li{
+width: 100%;
+position: relative;
+float: left;
+border-top: 1px solid #DDD;
+}
+li{
+    line-height: 18px;
+}
+.invoice-items-header{
+    width: 100%;
+    font-weight: bold;
+}
+.invoice .invoice-item {
+    width: 40%;
+}
+.invoice .invoice-rate {
+    width: 10%;
+    text-align: center;
+}
+.invoice .invoice-subtotal {
+    width: 10%;
+    text-align: center;
+}
+.invoice .invoice-quantity {
+width: 10%;
+text-align:center;
+}
+.invoice li > div{
+    padding:8px 10px;
+    float: left;
+    min-height: 20px;
+}
+.invoice .invoice-items-header > div{
+    padding: 8px 10px;
+    float: left;
+    background: none repeat scroll 0% 0% rgb(245, 245, 245);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.invoice-summary{
+    display: table;
+    border: white solid 1px;
+    width: 45%;
+    height: 75px;
+    margin-top: 25px;
+    float:right;
+}
+.summary-header{
+    display: block;
+    border: darkgrey solid 1px;
+    border-left-color: white;
+    border-right-color: white;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background: none repeat scroll 0% 0% rgb(245, 245, 245);
+}
+.invoice .row {
+    width: 100%;
+    position: relative;
+    float: left;
+    border-top: 1px solid rgb(221, 221, 221);
+}
+.rowl{
+    float:left;
+    width: 50%;
+    min-height: 20px;
+}
+.rowr{
+    float: right;
+    width: 50%;
+}
+.row{
+    border: darkgrey solid 1px;
+    border-left-color: white;
+    border-right-color: white;
+    height: 30px;
+}
+.invoice .invoice-terms {
+color: #999;
+float: left;
+clear: both;
+margin: 20px 20px 20px 20px;
+font-size: 14px;
+}
+.inner-left .invoice-meta-wrapper{
+    width: 258px;
+    height: 220px;
+    display: block;
+    float: right;
+    left: 20px;
+}
+.invoice-meta-wrapper .content{
+    display: block;
+    /*border: red solid 1px;*/
+    margin: 0px 30px 0px 30px ;
+    height: 220px;
+}
+
+.invoice-meta-wrapper .client-name{
+    font-weight: bold;
+    color: darkgrey;
+    font-size: 19px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.invoice-meta-wrapper .value{
+    float: right;
+}
+.value_l{
+    float: left;
+    width: 45%;
+    color: #666;
+}
+.value_r{
+    float: left;
+    width: 55%;
+}
+.invoice-due-date{
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.content .content1{
+   height: 155px;
+   width: 100%;
+}
+.status-text{
+    display: block;
+    width: 60px;
+    height: 20px;
+    background-color: #e5f6e5;
+    color: green;
+    border-radius: 3px;
+    border: #bbe7c5 solid 1px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.action{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: serif;
+}
+.action .action-preview{
+    border: darkgrey solid 1px;
+    padding:4px 6px 8px 6px;
+    width: 30%;    
+    float:left;
+    margin-right: 3px;
+     background-color: #eeeeee;
+     height: 15px;
+     
+}
+.action .action-download{
+    border: darkgrey solid 1px;
+    padding:4px 6px 8px 6px;
+    width: 35%; 
+    float: left;
+    background-color: #eeeeee;
+    height: 15px;
+}
+a{
+    color: #999;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+.inner-right{
+    float: right;
+    width: 260px;
+    height: 510px;
+    display: block;
+    /*border: red solid 1px;*/
+}
+.message-menu{
+    color: #aaaaaa;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 13px;
+    /*border: green solid 1px;*/
+    width: 100%;
+   height: 25px;
+   
+}
+.message-menu .message-title{
+    display: inline-block;
+}
+.message-content{
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: #DDD solid 1px;
+    border-top-color: white;
+    margin-bottom: 20px;
+    
+}
+.new-message{
+    display: block;
+    margin: 20px 20px;
+    border: #DDD solid 1px;
+    height: 160px;      
+}
+.message-action{
+    display: block;
+    width: 100%;
+    height: 35px;
+    border: #DDD solid 1px;
+}
+.message-action-left{
+    width: 60%;
+    float: left;
+    border: brown solid 1px;
+    height: 100%;
+}
+.message-action-right{ 
+    width: 30%;
+    height: 100%;
+    float: right;
+    /*border: brown solid 1px;*/
+    
+    text-align: center;
+}
+.button-send{
+    display: block;
+    height: 23px;
+    width: 40px;
+    margin-top: 4px;
+    margin-left: 10px;
+    background-color: #e8e8e8;
+    border: darkgrey solid 1px;
+    text-align: center;
+    font-size: 11px;
+    font-family: sans-serif;
+}
+.button-send .send-message{
+    color: #777;
+    margin-top: 4px;
+}
+.bold{
+    float: left;
+    margin: 5px;
+    font-weight: bold;
+}
+.italic{
+    float: left;
+    margin: 5px;
+    font-weight: bold;
+    font-style: italic;
+}
+.underline{
+    float: left;
+    margin: 5px;
+    font-weight: bold;
+}
+.strick{
+    float: left;
+    margin: 5px;
+    font-weight: bold;
+}

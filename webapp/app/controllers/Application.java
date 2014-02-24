@@ -1,14 +1,61 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
+import controllers.plugin.Authentication;
+import play.data.Form;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.login;
 
-import views.html.*;
+import static play.data.Form.form;
 
 public class Application extends Controller {
 
-    public static Result index() {
-        return ok(index.render());
-    }
+  /**
+   * default page
+   *
+   * @return
+   */
+  public static Result index() {
+    return redirect(routes.Projects.index());
+  }
 
+  /**
+   * login page
+   * @return
+   */
+  public static Result login() {
+    return ok(
+      login.render(
+        Form.form(Authentication.class)
+      )
+    );
+  }
+
+  /**
+   * authenticate post
+   * @return
+   */
+  public static Result authenticate() {
+    Form<Authentication> loginForm = Form.form(Authentication.class).bindFromRequest();
+    if (loginForm.hasErrors()) {
+      return badRequest(login.render(loginForm));
+    } else {
+      session("email", loginForm.get().email);
+      return redirect(
+        routes.Projects.index()
+      );
+    }
+  }
+
+  /**
+   * logout page
+   * @return
+   */
+  public static Result logout() {
+    session().clear();
+    flash("success", "You've been logged out");
+    return redirect(
+      routes.Application.login()
+    );
+  }
 }
