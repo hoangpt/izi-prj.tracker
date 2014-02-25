@@ -1,0 +1,13 @@
+@(user:User)
+
+<div id="h1">
+    <b style="padding-right:100px;"> This element's opacity is 0.5! </b>
+    <input type="text" value="Search" style="border-radius: 10px ;">
+    <b style="padding-left:50px;"><img src='@routes.Assets.at("skin/default/nghia_blue/images/avatar.jpg")' width="25px" height="25px"></b>
+    <a href="# " style="padding:0px 50px 10px 0px;text-decoration: none;color: white;">
+        Hi , @user.name <span>(@user.email)</span>
+    </a>
+    <a href="@routes.Application.logout()" style="text-decoration: none;color: white;">
+        Logout
+    </a>
+</div>

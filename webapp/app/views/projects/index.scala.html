@@ -1,6 +1,9 @@
 @(projects: List[Project], tasks: List[Task], user: User)
 
-@main("Project page") {
+@main("Project page", user){
+<link />
+<script></script>
+}{
 <div id="h2">
     <a href="#" id="Dashboard" style="text-decoration: none;color: white;line-height:50px;">Dashboard</a><br>
     <a href="#" id="Projects" style="text-decoration: none;color: white;line-height:50px;">Projects</a><br>
@@ -12,5 +15,5 @@
     <a href="#" id="Users" style="text-decoration: none;color: white;line-height:50px;">Users</a><br>
     <a href="#" id="Templates" style="text-decoration: none;color: white;line-height:50px;">Project Templates</a><br>
     <a href="#" id="Admin" style="text-decoration: none;color: white;line-height:50px;">Admin</a><br>
-</div>`
+</div>
 }
