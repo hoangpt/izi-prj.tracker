@@ -44,6 +44,8 @@ create table account (
   email                     varchar(255) not null,
   name                      varchar(255),
   password                  varchar(255),
+  is_active                 tinyint(1) default 0,
+  avatar                    varchar(255),
   constraint pk_account primary key (email))
 ;
 

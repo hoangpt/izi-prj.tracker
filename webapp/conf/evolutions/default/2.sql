@@ -21,7 +21,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 --  Records of `account`
 -- ----------------------------
 BEGIN;
-INSERT INTO `account` VALUES ('admin@email.com', 'admin', 'password');
+INSERT INTO `account` VALUES ('admin@email.com', 'admin', 'password', '1', 'upload/avatar.jpg');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

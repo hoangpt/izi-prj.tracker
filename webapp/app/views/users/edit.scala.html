@@ -1,0 +1,41 @@
+@(loginUser: User, user: User, users: List[User])
+
+@tpldefault_main("Users Management", loginUser){
+<link />
+<script></script>
+}{
+<div id="h3">
+    <b style="font-size: 16px;">Users</b>
+    <br>
+    ____________
+    <br>
+    <a style="line-height:30px;"> &nbsp;</a>
+    <div style="overflow:auto; line-height: 30px;height: 650px;">
+        @for(user <- users){
+        <a href="@routes.Users.edit(user.email)" id="uadmin" style="text-decoration: none;color:white">
+            @user.email<br>
+        </a>
+        <b style="opacity:0.5;">__________</b><br>
+        }
+    </div>
+</div>
+
+<div id="h4">
+    <img src='@routes.Assets.at("skin/default/nghia_blue/images/avatar.jpg")' style="width: 350px; height: 350px;"/>
+    <div style="float: right; margin-right: 20px;">
+        <p>
+            <span>Email:</span> <input value="@user.email"/>
+        </p>
+        <p>
+            <span>Name:</span> <input value="@user.name"/>
+        <p>
+            <span>Pass:</span> <input value="@user.password"/>
+        </p>
+
+        <form action="@routes.Users.delete(user.email)" method="post">
+        <button type="submit" style="width: 100px;">Delete</button>
+        </form>
+    </div>
+</p>
+</div>
+}
