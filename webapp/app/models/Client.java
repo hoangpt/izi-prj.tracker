@@ -6,6 +6,7 @@ import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Client extends Model {
@@ -47,4 +48,5 @@ public class Client extends Model {
     this.chefEmail = chefEmail;
     this.chefPhone = chefPhone;
   }
+
 }
