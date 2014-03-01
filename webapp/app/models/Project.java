@@ -10,6 +10,7 @@ import java.util.Date;
 
 /**
  * use entity framework for ORM
+ *  @author nghia
  */
 @Entity
 public class Project extends Model {
