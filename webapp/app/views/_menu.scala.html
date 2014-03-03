@@ -1,26 +1,81 @@
 @(user:User)
 
 <div id="h1">
-    <b style="padding-right:100px;"> This element's opacity is 0.5! </b>
-    <input type="text" value="Search" style="border-radius: 10px ;">
-    <b style="padding-left:50px;"><img src='@routes.Assets.at("skin/default/nghia_blue/images/avatar.jpg")' width="25px" height="25px"></b>
-    <a href="# " style="padding:0px 50px 10px 0px;text-decoration: none;color: white;">
-        Hi , @user.name <span>(@user.email)</span>
-    </a>
-    <a href="@routes.Application.logout()" style="text-decoration: none;color: white;">
-        Logout
-    </a>
+  <b style="padding-right:100px;"> This element's opacity is 0.5! </b>
+  <input type="text" value="Search" style="border-radius: 10px ;">
+  <b style="padding-left:50px;"><img src='@routes.Assets.at("skin/default/nghia_blue/images/avatar.jpg")' width="25px" height="25px"></b>
+  <a href="# " style="padding:0px 50px 10px 0px;text-decoration: none;color: white;">
+    Hi , @user.name <span>(@user.email)</span>
+  </a>
+  <a href="@routes.Application.logout()" style="text-decoration: none;color: white;">
+    Logout
+  </a>
 </div>
 
 <div id="h2">
-    <a href="#" id="Dashboard" style="text-decoration: none;color: white;line-height:50px;">Dashboard</a><br>
-    <a href="@routes.Projects.index()" id="Projects" style="text-decoration: none;color: white;line-height:50px;">Projects</a><br>
-    <a href="#" id="Invoices" style="text-decoration: none;color: white;line-height:50px;">Invoices</a><br>
-    <a href="#" id="Reporting" style="text-decoration: none;color: white;line-height:50px;">Reporting</a><br>
-    <a href="@routes.Clients.index()" id="Clients" style="text-decoration: none;color: white;line-height:50px;">Clients</a><br>
-    <a href="#" id="Files" style="text-decoration: none;color: white;line-height:50px;">Files</a><br>
-    <a href="#" id="Tasks" style="text-decoration: none;color: white;line-height:50px;">Tasks</a><br>
-    <a href="@routes.Users.index()" id="Users" style="text-decoration: none;color: white;line-height:50px;">Users</a><br>
-    <a href="#" id="Templates" style="text-decoration: none;color: white;line-height:50px;">Project Templates</a><br>
-    <a href="#" id="Admin" style="text-decoration: none;color: white;line-height:50px;">Admin</a><br>
+  <a href="#" id="Dashboard" style="text-decoration: none;color: white;line-height:50px;">Dashboard</a><br>
+  <a href="@routes.Projects.index()" id="Projects" style="text-decoration: none;color: white;line-height:50px;">Projects</a><br>
+  <a href="#" id="Invoices" style="text-decoration: none;color: white;line-height:50px;">Invoices</a><br>
+  <a href="#" id="Reporting" style="text-decoration: none;color: white;line-height:50px;">Reporting</a><br>
+  <a href="@routes.Clients.index()" id="Clients" style="text-decoration: none;color: white;line-height:50px;">Clients</a><br>
+  <a href="#" id="Files" style="text-decoration: none;color: white;line-height:50px;">Files</a><br>
+  <a href="#" id="Tasks" style="text-decoration: none;color: white;line-height:50px;">Tasks</a><br>
+  <a href="#@routes.Users.index()" id="Users" style="text-decoration: none;color: white;line-height:50px;">Users</a><br>
+  <a href="#" id="Templates" style="text-decoration: none;color: white;line-height:50px;">Project Templates</a><br>
+  <a href="#" id="Admin" style="text-decoration: none;color: white;line-height:50px;">Admin</a><br>
 </div>
+
+<div id="h3"></div>
+<div id="h4"></div>
+
+<script>
+  $(document).ready(function () {
+    /**
+     * click in the link
+     */
+    $('#h2 a').click(function () {
+      var url = $(this).attr('href').substr(1);
+      $.ajax({
+        url: url,
+        async: false,
+        success: function (response) {
+          var content = $(response);
+          $('#h3').html(content);
+        }
+      })
+    });
+
+    $('#users_div a.uadmin').live({
+      click: function () {
+        var url = $(this).attr('href').substr(1);
+        $('#h4').addClass("loading");
+        $.ajax({
+          url: url,
+          success: function (response) {
+            var content = $(response);
+            $('#h4').removeClass("loading").html(content); //chaining
+          }
+        });
+      }
+    });
+
+    var hash = $(location).attr('hash');
+    $('#h2 a').each(function(){
+      var urlHash = $(this).attr('href');
+      if(hash.indexOf(urlHash) != -1 && urlHash != '#'){
+        $(this).trigger('click');
+        return false;
+      }
+    });
+
+    //use with user
+    $('#h3 a.uadmin').each(function(){
+      var urlHash2 = $(this).attr('href');
+      console.log(hash, urlHash2);
+      if(hash == urlHash2){
+        $(this).trigger('click');
+        return false;
+      }
+    })
+  })
+</script>

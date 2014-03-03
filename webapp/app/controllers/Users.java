@@ -23,7 +23,6 @@ public class Users extends Controller {
 
     return ok(
       views.html.users.index.render(
-        loginUser,
         users
       )
     );
@@ -42,16 +41,12 @@ public class Users extends Controller {
   }
 
   public static Result edit(String email) {
-    List<User> users = User.findAll();
     User user = User.findByEmail(email);
-
-    return ok(views.html.users.edit.render(loginUser, user, users));
+    return ok(views.html.users.edit.render(loginUser, user));
   }
 
   public static Result view(String email) {
-    List<User> users = User.findAll();
     User user = User.findByEmail(email);
-
-    return ok(views.html.users.edit.render(loginUser, user, users));
+    return ok(views.html.users.edit.render(loginUser, user));
   }
 }

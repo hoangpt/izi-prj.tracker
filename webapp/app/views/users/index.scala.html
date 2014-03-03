@@ -1,22 +1,20 @@
-@(loginUser: User, users: List[User])
+@(users: List[User])
 
-@tpldefault_main("Users Management", loginUser){
-<link />
-<script></script>
-}{
-<div id="h3">
-    <b style="font-size: 16px;">Users</b>
-    <br>
-    ____________
-    <br>
-    <a style="line-height:30px;"> &nbsp;</a>
-    <div style="overflow:auto; line-height: 30px;height: 650px;">
-        @for(user <- users){
-        <a href="@routes.Users.edit(user.email)" id="uadmin" style="text-decoration: none;color:white">
-            @user.email<br>
-        </a>
-        <b style="opacity:0.5;">__________</b><br>
-        }
-    </div>
+@tpldefault_ajax("Users Management"){
+<div id="users_div">
+  <b style="font-size: 16px;">Users</b>
+  <br>
+  ____________
+  <br>
+  <a style="line-height:30px;"> &nbsp;</a>
+
+  <div style="overflow:auto; line-height: 30px;height: 650px;">
+    @for(user <- users){
+    <a href="#@routes.Users.edit(user.email)" class="uadmin" style="text-decoration: none;color:white">
+      @user.email<br>
+    </a>
+    <b style="opacity:0.5;">__________</b><br>
+    }
+  </div>
 </div>
 }

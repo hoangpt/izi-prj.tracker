@@ -17,7 +17,7 @@ public class Application extends Controller {
    * @return
    */
   public static Result index() {
-    return redirect(routes.Projects.index());
+    return redirect(routes.Dashboard.index());
   }
 
   /**

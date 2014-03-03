@@ -25,8 +25,8 @@ public class User extends Model {
   @Constraints.Required
   public String password;
 
-  boolean isActive;
-  String avatar;
+  public boolean isActive;
+  public String avatar;
 
   /**
    * Queries find by on filter
