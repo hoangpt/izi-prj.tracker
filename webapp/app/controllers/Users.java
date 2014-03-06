@@ -42,11 +42,11 @@ public class Users extends Controller {
 
   public static Result edit(String email) {
     User user = User.findByEmail(email);
-    return ok(views.html.users.edit.render(loginUser, user));
+    return ok(views.html.users.edit.render(user));
   }
 
   public static Result view(String email) {
     User user = User.findByEmail(email);
-    return ok(views.html.users.edit.render(loginUser, user));
+    return ok(views.html.users.edit.render(user));
   }
 }
